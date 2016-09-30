@@ -7,9 +7,9 @@ public class Deck {
 
 	}
 
-	public Card draw() {
+/*	public Card draw() {
 
 	}
-
+*/
 
 }

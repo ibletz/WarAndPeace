@@ -22,7 +22,9 @@ public class Deck {
 			for(CardValue val : CardValue.values())
 				deck.add(new Card(val,suit)); //for each value and each suit, create a card
 	}
-	
+	/**
+	 * 
+	 */
 	public void printDeck() {
 		int count = 1;
 			// for every card in this deck, print the card
@@ -33,8 +35,16 @@ public class Deck {
 		}
 	}
 		// return number of cards left in deck
+	/**
+	 * 
+	 * @return
+	 */
 	public int cardsLeft() { return deck.size(); }
 		// return number of cards already drawn
+	/**
+	 * 
+	 * @return
+	 */
 	public int cardsDrawn() { return drawnCards.size(); }
 	
 		// returns all the cards to the deck from the drawn pile
@@ -44,7 +54,10 @@ public class Deck {
 		drawnCards.clear();
 	}
 
-
+	/**
+	 * 
+	 * @return
+	 */
 	public Card draw() {
 			// check if there are any cards left. If not, reshuffle the deck.
 		if(deck.size() == 0)

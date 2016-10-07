@@ -1,6 +1,4 @@
 package warAndPeace;
-
-
 /**
  * Values of typical playing cards
  * @author I.BletzFuller

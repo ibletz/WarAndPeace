@@ -1,5 +1,4 @@
 package warAndPeace;
-
 /**
  * Suits of typical playing cards
  * @author I.BletzFuller

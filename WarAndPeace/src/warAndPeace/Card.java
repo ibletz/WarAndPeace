@@ -1,6 +1,10 @@
 package warAndPeace;
 
-
+/**
+ * 
+ * @author I.BletzFuller
+ *
+ */
 public class Card {
 	
 	private CardValue value;
@@ -11,7 +15,7 @@ public class Card {
 		this.value = value;
 		this.suit = suit;
 	}
-	
+		//converts the 
 	public String toString() {
 		return value + " of " + suit;
 	}
@@ -19,18 +23,14 @@ public class Card {
 	// returns true if this card's value is greater than card c
 	public boolean winner(Card c) {
 			
-		if(value.compareTo(c.value) == 0) {
+		if(value.compareTo(c.value) == 0)
 			if(suit.compareTo(c.suit) > 0)
-				return true;
+				return true; 
 			else
-				return false;					// what about a complete tie?
-		} else if(value.compareTo(c.value) > 0)
+				return false;						// what about a complete tie?
+		else if(value.compareTo(c.value) > 0)
 			return true;
-		  else 
+		else  
 			return false;
 	}
-		
-	
-		
 }
-	

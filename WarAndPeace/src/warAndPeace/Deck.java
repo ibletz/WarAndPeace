@@ -3,6 +3,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
+ * Deck of Playing Cards.
+ * A collection of Card Objects representing the 52 cards in a standard
+ * deck of playing cards. Keeps track of drawn and remaining cards in the deck
+ * using two ArrayList<Card> objects
  * 
  * @author I.BletzFuller
  *
@@ -23,7 +27,7 @@ public class Deck {
 				deck.add(new Card(val,suit)); //for each value and each suit, create a card
 	}
 	/**
-	 * 
+	 * Print out all of the cards in this deck, one per line.
 	 */
 	public void printDeck() {
 		int count = 1;
@@ -36,18 +40,22 @@ public class Deck {
 	}
 		// return number of cards left in deck
 	/**
-	 * 
-	 * @return
+	 * The remaining number of cards that can be drawn from the deck.
+	 * @return deck.size the number of cards left (0-52)
 	 */
 	public int cardsLeft() { return deck.size(); }
 		// return number of cards already drawn
 	/**
-	 * 
-	 * @return
+	 * The total number of cards that have been drawn from the deck
+	 * @return drawnCards.size the number of cards already drawn (0-52)
 	 */
 	public int cardsDrawn() { return drawnCards.size(); }
 	
 		// returns all the cards to the deck from the drawn pile
+	/**
+	 * Returns all drawn cards to the undrawn deck, and empties the
+	 * drawnCards list.
+	 */
 	public void reShuffle() {
 		deck.addAll(drawnCards);
 		System.out.println("Out of cards, reshuffling...");
@@ -55,8 +63,9 @@ public class Deck {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Draws a card randomly from the deck.
+	 * Uses randInt object to select from remaining cards in undrawn deck
+	 * @return	newCard random card from remaining deck of cards
 	 */
 	public Card draw() {
 			// check if there are any cards left. If not, reshuffle the deck.
